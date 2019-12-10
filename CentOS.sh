@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 ######################################################
 # Title: Install Python3.7 and Web-Spider environment#
-# Author: Afflecky                                   #
+# Author: Etnous                                     #
 # Update date: December 10, 2019                     #
 ######################################################
 yum update -y
