@@ -52,6 +52,7 @@ pip install tesserocr pillow
 wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
 rpm -ivh mysql-community-release-el7-5.noarch.rpm
 yum install -y mysql mysql-server
+rm -rf mysql-community-release-el7-5.noarch.rpm
 systemctl start mysqld && systemctl enable mysqld
 
 ###Install pymysql
