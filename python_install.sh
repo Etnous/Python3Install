@@ -2,6 +2,7 @@
 #######################################################
 # Title: Install Python3.7 and Web scraping frameworks#
 # Author: Etnous                                      #
+# Blog: https://lala.biz                              #
 # Update date: December 11, 2019                      #
 #######################################################
 
