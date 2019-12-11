@@ -173,10 +173,8 @@ install_web_scraping_frameworks(){
           debian_install_web_scraping_frameworks
       fi
   else
-    echo -e "${error}${Yellow_font_prefix}You haven't install python yet!${Font_color_suffix}\n"
-  
+    echo -e "${error}${Yellow_font_prefix}You haven't install python yet!${Font_color_suffix}\n" && exit 1
   fi
-
 }
 
 centos_install_python(){
