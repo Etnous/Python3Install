@@ -242,7 +242,7 @@ centos_install_python(){
   rm -rf /usr/bin/pip
   ln -s /usr/local/sbin/python-$py_v/bin/pip3 /usr/bin/pip
   if [[ $(python -V) == "Python $py_v" ]]; then
-    echo -e "${info}${Yellow_font_prefix}Successfully installed python!${Font_color_suffix}" && eixt 0
+    echo -e "${info}${Yellow_font_prefix}Successfully installed python!${Font_color_suffix}" && exit 0
   else
     echo -e "${error}${Red_font_prefix}Failed to install python.${Font_color_suffix}\n" && exit 1
   fi
@@ -264,7 +264,7 @@ debian_install_python(){
   rm -rf /usr/bin/pip
   ln -s /usr/local/sbin/python-$py_v/bin/pip3 /usr/bin/pip
   if [[ $(python -V) == "Python $py_v" ]]; then
-    echo -e "${info}${Yellow_font_prefix}Successfully installed python!${Font_color_suffix}" && eixt 0
+    echo -e "${info}${Yellow_font_prefix}Successfully installed python!${Font_color_suffix}" && exit 0
   else
     echo -e "${error}${Red_font_prefix}Failed to install python.${Font_color_suffix}\n" && exit 1
   fi
