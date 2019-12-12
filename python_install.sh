@@ -233,7 +233,7 @@ centos_install_python(){
   wget https://www.python.org/ftp/python/$py_v/Python-$py_v.tar.xz && tar xvJf Python-$py_v.tar.xz
   rm -rf xvJf Python$py_v.tar.gz
   mv Python-$py_v /usr/local/python-$py_v && cd /usr/local/python-$py_v/
-  ./configure --prefix=/usr/local/sbin/python$py_v && make && make install
+  ./configure --prefix=/usr/local/sbin/python-$py_v && make && make install
   cd /root
   rm -rf /usr/bin/python
   ln -s /usr/local/sbin/python-$py_v/bin/python3 /usr/bin/python
