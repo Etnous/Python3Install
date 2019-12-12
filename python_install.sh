@@ -24,7 +24,7 @@ osfile="/etc/os-release"
 
 #check os
 check_os(){
-  if [ -e $osfile ]; then
+  if [ -e $osfile ] && [ $(uname -m) == "x86_64" ]; then
     source $osfile
     case "$ID" in
       centos)
