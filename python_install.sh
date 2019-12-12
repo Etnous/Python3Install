@@ -230,8 +230,8 @@ centos_install_python(){
   cd /usr/local/src
   yum groupinstall -y "Development tools"
   yum install -y gcc gcc-c++ make git freetype-devel fontconfig-devel sqlite-devel ncurses-libs zlib-devel mysql-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel openssl-devel zlib* libffi-devel
-  wget https://www.python.org/ftp/python/$py_v/Python-$py_v.tar.xz && tar xvJf Python-$py_v.tar.xz
-  rm -rf xJf Python$py_v.tar.gz
+  wget https://www.python.org/ftp/python/$py_v/Python-$py_v.tar.xz && tar xJf Python-$py_v.tar.xz
+  rm -rf Python$py_v.tar.gz
   mv Python-$py_v /usr/local/python-$py_v && cd /usr/local/python-$py_v/
   ./configure --prefix=/usr/local/sbin/python-$py_v && make && make install
   cd /root
@@ -255,8 +255,8 @@ debian_install_python(){
   mkdir -p /usr/local/src
   cd /usr/local/src
   apt install -y gcc g++ git make build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev
-  wget https://www.python.org/ftp/python/$py_v/Python-$py_v.tar.xz && tar xvJf Python-$py_v.tar.xz
-  rm -rf xJf Python-$py_v.tar.gz
+  wget https://www.python.org/ftp/python/$py_v/Python-$py_v.tar.xz && tar xJf Python-$py_v.tar.xz
+  rm -rf Python-$py_v.tar.gz
   mv Python-$py_v /usr/local/python-$py_v && cd /usr/local/python-$py_v/
   ./configure --prefix=/usr/local/sbin/python-$py_v && make && make install
   rm -rf /usr/bin/python
