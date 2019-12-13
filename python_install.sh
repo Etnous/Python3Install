@@ -53,12 +53,12 @@ check_os(){
         fi
       ;;
       *)
-        echo -e "Wrong ID" && exit 1
+        echo -e "${error}${Yellow_font_prefix}This script doesn't support your system!${Font_color_suffix}\n" && exit 1
       ;;
     esac
 
   else
-    echo -e "${error}${Yellow_font_prefix}This script doesn't support your system!${Font_color_suffix}\n"
+    echo -e "${error}${Yellow_font_prefix}This script doesn't support your system!${Font_color_suffix}\n" && exit 1
   fi
 }
 
