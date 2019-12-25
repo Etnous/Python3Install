@@ -465,8 +465,8 @@ clear
 check_root
 echo -e "${info}${Yellow_font_prefix}}This script only support CentOS 7/8 Debian 9/10 Ubuntu 16.04/18.04 with 64bit.${Font_color_suffix}\n"
 check_os
-#install_figlet
-#figlet WELCOME
+#install_figlet # useless
+#figlet WELCOME # useless
 echo -e "
 =============================================
 Author: Etnous
