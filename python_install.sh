@@ -88,6 +88,8 @@ select_area(){
       echo -e 'nameserver 114.114.114.114\nnameserver 114.114.115.115'> /etc/resolv.conf
       rm -rf /etc/yum.repos.d/CentOS-Base.repo
       wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo &>/dev/null
+      sed -i "s/http:\/\/mirrors\.cloud\.aliyuncs\.com\/epel/http:\/\/mirrors\.aliyun\.com\/epel/g" /etc/yum.repos.d/epel.repo
+      sed -i "s/http:\/\/mirrors\.cloud\.aliyuncs\.com\/centos/http:\/\/mirrors\.aliyun\.com\/centos/g" /etc/yum.repos.d/CentOS-Base.repo
       echo -e "${info}${Yellow_font_prefix}Successfully change the source!${Font_color_suffix}" && install_python
 
     elif [[ $os_version == "centos" ]] && [[ $VERSION_ID == "8" ]]; then
