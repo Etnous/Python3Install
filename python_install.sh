@@ -112,8 +112,14 @@ select_area(){
 
     elif [[ $os_version == "debian" ]] && [[ $VERSION_ID == "10" ]]; then
       echo -e 'nameserver 114.114.114.114\nnameserver 114.114.115.115'> /etc/resolv.conf
-      echo 'deb https://mirrors.aliyun.com/debian  stable main contrib non-free
-            deb https://mirrors.aliyun.com/debian  stable-updates main contrib non-free' > /etc/apt/sources.list
+      echo 'deb http://deb.debian.org/debian buster main contrib non-free
+            deb-src http://deb.debian.org/debian buster main contrib non-free
+            deb http://deb.debian.org/debian-security/ buster/updates main contrib non-free
+            deb-src http://deb.debian.org/debian-security/ buster/updates main contrib non-free
+            deb http://deb.debian.org/debian buster-updates main contrib non-free
+            deb-src http://deb.debian.org/debian buster-updates main contrib non-free
+            deb http://deb.debian.org/debian buster-backports main
+            deb-src http://deb.debian.org/debian buster-backports main' > /etc/apt/sources.list
       echo -e "${info}${Yellow_font_prefix}Successfully change the source!${Font_color_suffix}" && install_python
 
     elif [[ $os_version == "ubuntu" ]] && [[ $VERSION_ID == "16.04" ]]; then
